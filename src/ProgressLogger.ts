@@ -57,7 +57,7 @@ export class ProgressLogger {
   
   private print() : void {
     if (this.c - this.lastc >= this.intervalCount ||
-        this.lastTs - Date.now() >= this.intervalSeconds*1000) {
+        Date.now() - this.lastTs >= this.intervalSeconds*1000) {
       this.logFunc(this.formatProgress());
       this.lastc = this.c;
       this.lastTs = Date.now();

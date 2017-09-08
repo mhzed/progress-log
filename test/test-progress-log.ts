@@ -35,6 +35,4 @@ exports.testlog = (test : nodeunit.Test) => {
       })
     })
   })
-  
-  test.done();
 }
