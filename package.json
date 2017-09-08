@@ -1,0 +1,22 @@
+{
+  "name": "progress-log",
+  "version": "1.0.0",
+  "description": "log progress in console app",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit"
+  },
+  "author": "mhzedd@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "phuture": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.74",
+    "@types/node": "^8.0.27",
+    "@types/nodeunit": "0.0.30",
+    "nodeunit": "^0.11.1",
+    "typescript": "^2.5.2"
+  }
+}
