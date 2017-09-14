@@ -1,6 +1,6 @@
 {
   "name": "progress-log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "log progress in console app",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "author": "mhzedd@gmail.com",
   "license": "ISC",
+  "repository": "https://github.com/mhzed/progress-log",
   "dependencies": {
     "lodash": "^4.17.4",
     "phuture": "^1.0.6"
