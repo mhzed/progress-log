@@ -1,6 +1,6 @@
 {
   "name": "progress-log",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "log progress in console app",
   "main": "index.js",
   "scripts": {

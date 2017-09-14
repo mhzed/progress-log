@@ -55,29 +55,32 @@ export class ProgressLogger {
     return s;
   }
   
-  private print() : void {
+  private print() : boolean {
     if (this.c - this.lastc >= this.intervalCount ||
         Date.now() - this.lastTs >= this.intervalSeconds*1000) {
       this.logFunc(this.formatProgress());
       this.lastc = this.c;
       this.lastTs = Date.now();
-
+      return true;
     }
+    return false;
   }
   
   isOpenEnded() {
     return this.total == Number.MAX_SAFE_INTEGER;
   }
   
-  tick(n: number) : void {
+  // returns true if status printed
+  tick(n: number) : boolean {
     this.rate.tick(n);
     this.c += n;
-    this.print();
+    let ret = this.print();
     
     this.completed = (this.c >= this.total);
     if (this.completed) {
       this._duration = this.elapsed();
     }
+    return ret;
   }
   
   elapsed(): number {
